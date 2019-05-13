@@ -2,7 +2,7 @@ var router = require('express').Router();
 var React = require('react');
 var ReactDOMServer = require('react-dom/server');
 var ReactRouter = require('react-router');
-var Redux = require('redux/index');
+var Redux = require('redux');
 var Provider = require('react-redux').Provider;
 var NotFound = require('../views/layout/404.jsx');
 
