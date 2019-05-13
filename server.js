@@ -1,31 +1,14 @@
-import 'babel-polyfilll';
-const express = require('express');
-import React from 'react';
-import ReactDomServer from 'react-dom/server';
-import { StaticRouter} from "react-router";
-import bodyParse from 'body-parse';
-
-import App from 'app';
-
-const app = express();
-const PORT = process.env.PORT || 3000;
-
-app.use(bodyParse.json());
-app.use(express.static('build'));
-
-app.get('*', (req, res) => {
-    const context = {}
-    const content = ReactDomServer.renderToString(
-        <StaticRouter>
-            <App />
-        </StaticRouter>
-    );
-    const html = `
-    <html>${content}</html>
-    `;
-    res.send(html);
+require('babel-register')({
+    presets: ['react', 'es2015', 'es2017']
 });
 
-app.listen(PORT, () => {
-    console.log('APP is running with port ' + PORT);
+var express = require('express');
+var app = express();
+
+app.use(express.static('public'));
+app.use(require('./routes/index.jsx'));
+
+var PORT = 3000;
+app.listen(PORT, function() {
+    console.log('http://localhost:' + PORT);
 });
