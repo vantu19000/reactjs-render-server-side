@@ -30,6 +30,9 @@ class Layout extends React.Component {
                         <li>
                             <Link to='/about'>About</Link>
                         </li>
+                        <li>
+                            <Link to='/contact'>Contact</Link>
+                        </li>
                     </ul>
                     <script dangerouslySetInnerHTML={{
                         __html: 'window.PROPS=' + JSON.stringify(custom)

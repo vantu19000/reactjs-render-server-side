@@ -2,7 +2,7 @@
   "name": "universal-react-tutorial",
   "version": "0.0.0",
   "description": "A tutorial on building a universal React web application.",
-  "author": "Mark <mark@remarkablemark.org>",
+  "author": "vantu19000@gmail.com",
   "scripts": {
     "start": "webpack && node server.js",
     "dev": "npm-run-all --parallel watch:*",
@@ -32,7 +32,7 @@
     "webpack": "^1.13.1"
   },
   "devDependencies": {
-    "nodemon": "^1.11.0",
+    "nodemon": "^1.19.0",
     "npm-run-all": "^3.1.2"
   },
   "private": true,
