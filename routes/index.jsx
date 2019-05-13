@@ -26,7 +26,9 @@ router.get('*', function(request, response) {
         } else {
             //response.status(404).send('Not Found');
             var html = ReactDOMServer.renderToString(
-                <NotFound />
+                <Provider store={store}>
+                    <NotFound />
+                </Provider>
             );
             response.status(404).send(html);
         }

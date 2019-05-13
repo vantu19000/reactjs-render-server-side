@@ -6,10 +6,10 @@ import {
     browserHistory
 } from 'react-router';
 
-import Layout from '../views/Layout.jsx';
-import Index from '../views/Index.jsx';
-import About from '../views/About.jsx';
-import Contact from "../views/Contact.jsx";
+import Layout from '../views/pages/Layout.jsx';
+import Index from '../views/pages';
+import About from '../views/pages/About.jsx';
+import Contact from "../views/pages/Contact.jsx";
 
 module.exports = (
     <Router history={browserHistory}>
