@@ -9,7 +9,7 @@ import {
 import Layout from '../views/Layout.jsx';
 import Index from '../views/Index.jsx';
 import About from '../views/About.jsx';
-import Contact from "../views/Contact";
+import Contact from "../views/Contact.jsx";
 
 module.exports = (
     <Router history={browserHistory}>

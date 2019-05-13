@@ -1,7 +1,7 @@
 {
-  "name": "universal-react-tutorial",
+  "name": "BMIBLOG",
   "version": "0.0.0",
-  "description": "A tutorial on building a universal React web application.",
+  "description": "Build a blog react",
   "author": "vantu19000@gmail.com",
   "scripts": {
     "start": "webpack && node server.js",
