@@ -16,7 +16,7 @@ class Layout extends React.Component {
             <html>
                 <head>
                     <title>{custom.title}</title>
-                    <link rel='stylesheet' href='/style.css' />
+                    <link rel='stylesheet' href='/public/style.css' />
                 </head>
                 <body>
                     <h1>{custom.title}</h1>
@@ -37,7 +37,7 @@ class Layout extends React.Component {
                     <script dangerouslySetInnerHTML={{
                         __html: 'window.PROPS=' + JSON.stringify(custom)
                     }} />
-                    <script src='/bundle.js' />
+                    <script src='/public/bundle.js' />
                 </body>
             </html>
         );

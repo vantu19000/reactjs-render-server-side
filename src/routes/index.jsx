@@ -2,7 +2,7 @@ var router = require('express').Router();
 var React = require('react');
 var ReactDOMServer = require('react-dom/server');
 var ReactRouter = require('react-router');
-var Redux = require('redux');
+var Redux = require('redux/index');
 var Provider = require('react-redux').Provider;
 var NotFound = require('../views/layout/404.jsx');
 
@@ -24,13 +24,7 @@ router.get('*', function(request, response) {
             );
             response.send(html);
         } else {
-            //response.status(404).send('Not Found');
-            var html = ReactDOMServer.renderToString(
-                <Provider store={store}>
-                    <NotFound />
-                </Provider>
-            );
-            response.status(404).send(html);
+            response.status(404).send('Not Found');
         }
     });
 });

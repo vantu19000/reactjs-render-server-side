@@ -7,10 +7,9 @@ import {
 } from 'react-router';
 
 import Layout from '../views/pages/Layout.jsx';
-import Index from '../views/pages';
+import Index from '../views/pages/index.jsx';
 import About from '../views/pages/About.jsx';
 import Contact from "../views/pages/Contact.jsx";
-
 module.exports = (
     <Router history={browserHistory}>
         <Route path='/' component={Layout}>
