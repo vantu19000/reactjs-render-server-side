@@ -6,7 +6,7 @@ import {
     browserHistory
 } from 'react-router';
 
-import Layout from '../views/pages/Layout.jsx';
+import Layout from '../views/layout/Layout.jsx';
 import Index from '../views/pages/index.jsx';
 import About from '../views/pages/About.jsx';
 import Contact from "../views/pages/Contact.jsx";

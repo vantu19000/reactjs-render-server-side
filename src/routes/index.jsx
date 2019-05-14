@@ -15,9 +15,6 @@ router.get('*', function(request, response) {
         routes: require('./routes.js'),
         location: request.url
     }, function(error, redirectLocation, renderProps) {
-        console.log(error);
-        console.log(redirectLocation);
-        console.log(renderProps);
 
         if (renderProps) {
             var html = ReactDOMServer.renderToString(
