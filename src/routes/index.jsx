@@ -11,11 +11,14 @@ function reducer(state) { return state; }
 router.get('*', function(request, response) {
     var initialState = { title: 'VANTU19000' };
     var store = Redux.createStore(reducer, initialState);
-
     ReactRouter.match({
         routes: require('./routes.js'),
         location: request.url
     }, function(error, redirectLocation, renderProps) {
+        console.log(error);
+        console.log(redirectLocation);
+        console.log(renderProps);
+
         if (renderProps) {
             var html = ReactDOMServer.renderToString(
                 <Provider store={store}>
