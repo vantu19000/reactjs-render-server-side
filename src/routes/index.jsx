@@ -9,11 +9,11 @@ var NotFound = require('../views/layout/404.jsx');
 function reducer(state) { return state; }
 
 router.get('*', function(request, response) {
-    var initialState = { title: 'Universal React' };
+    var initialState = { title: 'VANTU19000' };
     var store = Redux.createStore(reducer, initialState);
 
     ReactRouter.match({
-        routes: require('./routes.jsx'),
+        routes: require('./routes.js'),
         location: request.url
     }, function(error, redirectLocation, renderProps) {
         if (renderProps) {

@@ -1,6 +1,6 @@
 var ReactDOM = require('react-dom');
 var React = require('react');
-var routes = require('./src/routes/routes.jsx');
+var routes = require('./src/routes/routes.js');
 var Redux = require('redux');
 var Provider = require('react-redux').Provider;
 
