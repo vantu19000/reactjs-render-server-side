@@ -1,25 +1,29 @@
 var router = require('express').Router();
 var React = require('react');
-import { match, RouterContext } from 'react-router';
 import ReactDOMServer from 'react-dom/server';
 import { StaticRouter } from "react-router";
 var Redux = require('redux');
-var Provider = require('react-redux').Provider;
-var NotFound = require('../views/layout/404.jsx');
+import { Provider } from 'react-redux'
+var NotFound = require('../views/layout/404.js');
+const store = require('../store');
 
 
 function reducer(state) { return state; }
 
 router.get('*', function(request, response) {
 
+    const jsx =
+        <Provider store={ store }>
+            <StaticRouter context={ context } location={ request.url }>
+                <NotFound />
+            </StaticRouter>
+        </Provider>;
+
     const context = {}
-    const content = ReactDOMServer.renderToString(
-        <StaticRouter>
-            <NotFound />
-        </StaticRouter>
-    );
+    const content = ReactDOMServer.renderToString(jsx);
     const html = `<html>${content}</html>`;
-    res.send(html);
+
+    response.send(html);
 
 });
 

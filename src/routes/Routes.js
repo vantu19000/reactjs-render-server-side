@@ -6,7 +6,7 @@ import Layout from '../views/layout/Layout.jsx';
 import Index from '../views/pages/index.jsx';
 import About from '../views/pages/About.jsx';
 import Contact from "../views/pages/Contact.jsx";
-import NotFound from "../views/layout/404.jsx";
+import NotFound from "../views/layout/404.js";
 
 /*
 module.exports = (
@@ -22,14 +22,17 @@ module.exports = (
 */
 
 
-class Routes extends React.Component{
+class Routes extends React.Component {
     render() {
         return (
             <Switch>
-                <Route path="/" render={props => (<Index {...props} />)} />
-                <Route path="about" render={props => (<About {...props} />)} />
-                <Route path="contact" render={props => (<Contact {...props} />)} />
+                <Route path="/" render={props => (<Layout {...props} />)}/>
+                <Route path="about" render={props => (<About {...props} />)}/>
+                <Route path="contact" render={props => (<Contact {...props} />)}/>
             </Switch>
         )
     }
 }
+
+
+export default Routes;
