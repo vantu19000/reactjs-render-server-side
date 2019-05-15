@@ -1,12 +1,15 @@
 var ReactDOM = require('react-dom');
 var React = require('react');
+import { Provider } from 'react-redux'
 var routes = require('./src/routes/Routes.js');
-var Redux = require('redux');
-var Provider = require('react-redux').Provider;
+import thunkMiddleware from "redux-thunk";
+import { createStore, applyMiddleware } from 'redux'
+import rootReducer from './src/reducers';
 
-function reducer(state) { return state; }
+let createStoreWithMiddleware = applyMiddleware(thunkMiddleware)(createStore);
+const store = createStoreWithMiddleware(rootReducer,
+    window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__());
 
-var store = Redux.createStore(reducer, window.PROPS);
 
 ReactDOM.render(
     <Provider store={store}>

@@ -1,6 +1,6 @@
 const path = require('path')
 require('babel-register')({
-    presets: ['react', 'es2015', 'es2017']
+    presets: ['react', 'env']
 });
 
 var express = require('express');

@@ -5,7 +5,7 @@ module.exports = {
         path: 'public'
     },
     module: {
-        loaders: [
+        rules: [
             {
                 test: /\.jsx?$/,
                 exclude: /node_modules/,

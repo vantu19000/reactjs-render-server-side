@@ -3,8 +3,6 @@ import { Link } from 'react-router'
 
 class Header extends Component {
     render() {
-        console.log(this.props.auth)
-
         const authButton = this.props.auth ? (
             <a href="/api/logout">Logout</a>
         ) : (
