@@ -12,7 +12,7 @@ router.get('*', function(request, response) {
     var initialState = { title: 'VANTU19000' };
     var store = Redux.createStore(reducer, initialState);
     ReactRouter.match({
-        routes: require('./routes.js'),
+        routes: require('./Routes.js'),
         location: request.url
     }, function(error, redirectLocation, renderProps) {
 

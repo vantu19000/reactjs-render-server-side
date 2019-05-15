@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router';
 import { connect } from 'react-redux';
+import Header from './Header';
 
 class Layout extends React.Component {
     constructor() {
@@ -20,6 +21,9 @@ class Layout extends React.Component {
                     <link rel='stylesheet' href='/public/style.css' />
                 </head>
                 <body>
+
+                    <Header />
+
                     <h1>{custom.title}</h1>
                     <p>Isn't server-side rendering remarkable?</p>
                     <button onClick={this._handleClick}>Click Me</button>
