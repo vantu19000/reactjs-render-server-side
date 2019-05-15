@@ -1,10 +1,6 @@
 import React from 'react';
-import {
-    Router,
-    Route,
-    IndexRoute,
-    browserHistory
-} from 'react-router';
+import {Switch, Route} from 'react-router';
+
 
 import Layout from '../views/layout/Layout.jsx';
 import Index from '../views/pages/index.jsx';
@@ -12,6 +8,7 @@ import About from '../views/pages/About.jsx';
 import Contact from "../views/pages/Contact.jsx";
 import NotFound from "../views/layout/404.jsx";
 
+/*
 module.exports = (
     <Router history={browserHistory}>
         <Route path='/' component={Layout}>
@@ -22,3 +19,17 @@ module.exports = (
         </Route>
     </Router>
 );
+*/
+
+
+class Routes extends React.Component{
+    render() {
+        return (
+            <Switch>
+                <Route path="/" render={props => (<Index {...props} />)} />
+                <Route path="about" render={props => (<About {...props} />)} />
+                <Route path="contact" render={props => (<Contact {...props} />)} />
+            </Switch>
+        )
+    }
+}
